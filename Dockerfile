@@ -5,7 +5,7 @@ COPY --from=mcr.microsoft.com/dotnet/sdk:7.0 /usr/share/dotnet/shared /usr/share
 
 RUN apt-get -y update \
     && apt-get install -y curl \
-    && curl -sL https://deb.nodesource.com/setup_${NODE_VERSION} | bash - \ 
+    && curl -sL https://deb.nodesource.com/setup_20.x | bash - \ 
     && apt-get install -y nodejs \
     && apt-get clean \
     && echo 'node verions:' $(node -v) \
